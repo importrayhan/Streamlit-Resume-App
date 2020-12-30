@@ -6,7 +6,7 @@ import pages.projects
 import pages.edu
 import pages.recommendations
 
-import resources.ast as ast
+
 
 PAGES = {
     "About": pages.about,
@@ -24,7 +24,7 @@ def main():
     page = PAGES[selection]
     
     with st.spinner(f"Loading {selection} ..."):
-        ast.write_page(page)
+        page.write()
 
     st.sidebar.title("Hire Me")
     st.sidebar.info(
